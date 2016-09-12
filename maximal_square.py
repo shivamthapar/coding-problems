@@ -18,10 +18,10 @@ Space Complexity: O(mn) -- use another matrix of same size
 Explanation:
 Dynamic programming. Keep track of max size square of 1s that can be made at
 entry matrix[i][j]. This is determined by the following:
-* if entry is on the top or left border, the max square containing that entry has
-to be 1 or 0, since it's on the edge.
-* otherwise, max size square will be 1 more than the minimum of the square above,
-to the left, and topleft.
+*   if entry is on the top or left border, the max square containing that entry has
+    to be 1 or 0, since it's on the edge.
+*   otherwise, max size square will be 1 more than the minimum of the square above,
+    to the left, and topleft.
 """
 def max_square(matrix):
     if len(matrix) == 0:
@@ -54,7 +54,7 @@ My initial significantly slower non-DP solution.
 1. Find largest possible size square. For a 5x4, this would be a 4x4 square.
 2. Find each possible square of this size in the array, and check if it's all 1s.
 3. If it is, return the area of this max size square.
-4. Decrement max square size by 1 and repeat steps 2-4. 
+4. Decrement max square size by 1 and repeat steps 2-4.
 """
 def max_square_2(matrix):
     if len(matrix) == 0:
