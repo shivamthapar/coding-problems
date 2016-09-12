@@ -22,6 +22,19 @@ entry matrix[i][j]. This is determined by the following:
     to be 1 or 0, since it's on the edge.
 *   otherwise, max size square will be 1 more than the minimum of the square above,
     to the left, and topleft.
+
+Keep track of the largest max size square value, which represents the side length
+of the maximum square. So, for the area, return the square of this.
+
+For example, given the above matrix, the following matrix of max size squares
+can be created:
+1 0 1 0 0       1 0 1 0 0
+1 0 1 1 1  =>   1 0 1 1 1
+1 1 1 1 1       1 1 1 2 2
+1 0 0 1 0       1 0 0 1 0
+
+The maximum value is 2, so the largest area is 4. 
+
 """
 def max_square(matrix):
     if len(matrix) == 0:
