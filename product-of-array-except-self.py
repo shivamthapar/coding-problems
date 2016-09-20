@@ -6,6 +6,11 @@ Solve it without division and in O(n).
 
 For example, given [1,2,3,4], return [24,12,8,6].
 """
+
+"""
+Runtime complexity: O(N)
+Space Complexity: O(N)
+"""
 def product_except_self(nums):
     if len(nums) <= 1:
         return -1
